@@ -1,3 +1,4 @@
+// Codewars, 'Calculate BMI'
 
 function bmi(weight, height) {
     let bmi = weight / Math.pow(height, 2);
@@ -13,12 +14,6 @@ function bmi(weight, height) {
         default: return 'Obese';
             break;
     } 
-    /*
-    return (bmi <= 18) ? 'Underweight' :
-    (bmi <= 25.0) ? 'Normal' :
-    (bmi <= 30.0) ? 'Overweight' :
-    'Obese';
-    */
 }
 
 
