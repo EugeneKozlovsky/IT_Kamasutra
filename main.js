@@ -42,7 +42,7 @@ function countBy(x, n) {
       z.push(i * x)
     };
     return z;
-  }
+}
 
 // Freecodecamp " Golf Code" (75)
 
@@ -64,3 +64,14 @@ function golfScore(par, strokes) {
         return names[6]
     }
 }
+//CodeWars "Find Multipless of a Number"
+function findMultiples(integer, limit) {
+    let resaultArray = [];
+    for (let i = integer; i <= limit; i++) {
+    if (i % integer == 0) {
+        resaultArray.push(i);
+    }
+    }
+    return resaultArray;
+}
+
