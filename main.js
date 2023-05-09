@@ -74,4 +74,11 @@ function findMultiples(integer, limit) {
     }
     return resaultArray;
 }
-
+// CodeWars "Reversed strings"
+function solution(str) {
+    var revers = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        revers += str[i];
+    }
+    return revers;
+}
