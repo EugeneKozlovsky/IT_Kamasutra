@@ -88,3 +88,18 @@ const stringToNumber = function(str){
     // put your code here
     return +str;
 }
+
+/* CodeWars "Find the smallest integer in the array"
+For example:
+Given [34, 15, 88, 2] your solution will return 2
+Given [34, -345, -1, 100] your solution will return -345 */
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+    let min = args[0];
+    for (let number of args) {
+        if (number >= min) continue;
+        min = number;
+    }
+    return min;
+    }
+}
