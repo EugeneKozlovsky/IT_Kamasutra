@@ -103,3 +103,15 @@ class SmallestIntegerFinder {
     return min;
     }
 }
+
+// FreeCodeCamp Basic JS-133
+//'Use recursion to create a range of numbers'
+function rangeOfNumbers(startNum, endNum) {
+    if (startNum == endNum) {
+        return [endNum];
+    } else {
+        let countArray = rangeOfNumbers(startNum, endNum - 1);
+        countArray.push(endNum)
+        return countArray
+    }
+}
