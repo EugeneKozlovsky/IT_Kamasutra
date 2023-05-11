@@ -115,3 +115,17 @@ function rangeOfNumbers(startNum, endNum) {
         return countArray
     }
 }
+
+// FreeCodeCamp Basic JS 'Record Collection'
+function lookUpProfile(name, prop) {
+    for (let contact of contacts) {
+  
+    switch (true) {
+      case (contact.firstName === name && contact.hasOwnProperty(prop)): return contact[prop];
+      break;
+      case (contact.firstName === name && !(contact.hasOwnProperty(prop))): return 'No such property';
+      break;
+    }
+   }
+    return 'No such contact'
+}
