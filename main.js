@@ -5,30 +5,34 @@ function bmi(weight, height) {
     console.log(bmi)
     console.log(bmi <= 25);
     switch (true) {
-        case (bmi <= 18.0): return 'Underweight';
+        case (bmi <= 18.0):
+            return 'Underweight';
             break;
-        case (bmi <= 25.0): return 'Normal';
+        case (bmi <= 25.0):
+            return 'Normal';
             break;
-        case (bmi <= 30.0): return 'Overweight';
+        case (bmi <= 30.0):
+            return 'Overweight';
             break;
-        default: return 'Obese';
+        default:
+            return 'Obese';
             break;
-    } 
+    }
 }
 
 /*' Calculate BMI'
 Option 2: */
 function bmi2(weight, height) {
-    return (bmi2 <= 18) ? 'Underweight':
-    (bmi2 <= 25.0) ? 'Normal':
-    (bmi2 <= 30.0) ? 'Overweight' : 'Obese'
+    return (bmi2 <= 18) ? 'Underweight' :
+        (bmi2 <= 25.0) ? 'Normal' :
+        (bmi2 <= 30.0) ? 'Overweight' : 'Obese'
 }
 
 // Codewars, 'Function 1 - hello world'
 
 function greet() {
     return "hello world!";
-    }
+}
 
 /* Codewars, 'Count by X'
 Create a function with two arguments that will 
@@ -39,7 +43,7 @@ to count will be positive numbers greater than 0. */
 function countBy(x, n) {
     let z = [];
     for (let i = 1; i <= n; i++) {
-      z.push(i * x)
+        z.push(i * x)
     };
     return z;
 }
@@ -47,6 +51,7 @@ function countBy(x, n) {
 // Freecodecamp " Golf Code" (75)
 
 const names = ['Hole-in-one', 'Eagle', 'Birdie', 'Par', 'Bogey', 'Double Bogey', 'Go Home!'];
+
 function golfScore(par, strokes) {
     if (strokes == 1) {
         return names[0]
@@ -68,9 +73,9 @@ function golfScore(par, strokes) {
 function findMultiples(integer, limit) {
     let resaultArray = [];
     for (let i = integer; i <= limit; i++) {
-    if (i % integer == 0) {
-        resaultArray.push(i);
-    }
+        if (i % integer == 0) {
+            resaultArray.push(i);
+        }
     }
     return resaultArray;
 }
@@ -84,7 +89,7 @@ function solution(str) {
 }
 
 // CodeWars "Convert a String to a Number!"
-const stringToNumber = function(str){
+const stringToNumber = function (str) {
     // put your code here
     return +str;
 }
@@ -95,12 +100,12 @@ Given [34, 15, 88, 2] your solution will return 2
 Given [34, -345, -1, 100] your solution will return -345 */
 class SmallestIntegerFinder {
     findSmallestInt(args) {
-    let min = args[0];
-    for (let number of args) {
-        if (number >= min) continue;
-        min = number;
-    }
-    return min;
+        let min = args[0];
+        for (let number of args) {
+            if (number >= min) continue;
+            min = number;
+        }
+        return min;
     }
 }
 
@@ -119,13 +124,29 @@ function rangeOfNumbers(startNum, endNum) {
 // FreeCodeCamp Basic JS 'Record Collection'
 function lookUpProfile(name, prop) {
     for (let contact of contacts) {
-  
-    switch (true) {
-      case (contact.firstName === name && contact.hasOwnProperty(prop)): return contact[prop];
-      break;
-      case (contact.firstName === name && !(contact.hasOwnProperty(prop))): return 'No such property';
-      break;
+        switch (true) {
+            case (contact.firstName === name && contact.hasOwnProperty(prop)):
+                return contact[prop];
+                break;
+            case (contact.firstName === name && !(contact.hasOwnProperty(prop))):
+                return 'No such property';
+                break;
+        }
     }
-   }
     return 'No such contact'
+}
+
+//FreeCodeCamp ES6 "Use getter and setter to Control Access to an Object"
+class Thermostat {
+    constructor(farenheit) {
+        this._celsius = (5 / 9) * (farenheit - 32);
+    }
+
+    get temperature() {
+        return this._celsius;
+    }
+
+    set temperature(celsius) {
+        return this._celsius = celsius
+    }
 }
