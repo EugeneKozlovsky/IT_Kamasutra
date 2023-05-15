@@ -78,7 +78,8 @@ class SmallestIntegerFinder {
     }
 }
 
-/* You received a whatsup message from an unknown number. Could it be from that girl/boy with a foreign accent you met yesterday evening?
+/* 'Did she say hallo?'
+You received a whatsup message from an unknown number. Could it be from that girl/boy with a foreign accent you met yesterday evening?
 Write a simple function to check if the string contains the word hallo in different languages.
 These are the languages of the possible people you met the night before:
 
@@ -94,9 +95,19 @@ you can assume the input is a string.
 to keep this a beginner exercise you don't need to check if the greeting is a subset of word (Hallowen can pass the test)
 function should be case insensitive to pass the tests
 */
-
 function validateHello(greetings) {
     let res =  /hello|ciao|salut|hallo|hola|ahoj|czesc/i.test(greetings) 
     return res;
 }
-alert(validateHello('ahoj'))
+
+/* Keep Hydrated!
+Nathan loves cycling.
+Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+
+For example:
+time = 3 ----> litres = 1
+time = 6.7---> litres = 3
+time = 11.8--> litres = 5
+*/
+let litres = (time) => { return Math.trunc(time * 0.5);}
