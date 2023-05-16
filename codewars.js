@@ -129,7 +129,25 @@ let points = (games) => {
     for (i of games) {
         let x = +i[0];
         let y = +i[2];
-        (x > y) ? count += 3: (x < y) ? count += 0 : count += 1;
+        count += (x > y) ? 3 : (x < y) ? 0 : 1;
     }
     return count;
+};
+let pointsTwo = games => games.reduce((total, current) => {
+    return total += current[0] > current[2] ? 3 : current[0] === current[2] ? 1 : 0;
+}, 0)
+let games = ["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"];
+
+/* Unfinished Loop - Bug Fixing #1
+Oh no, Timmy's created an infinite loop! Help Timmy find and fix the bug in his unfinished for loop!
+*/
+function createArray(number) {
+    var newArray = [];
+
+    for (var counter = 1; counter <= number;) {
+        newArray.push(counter);
+        counter++;
+    }
+
+    return newArray;
 }
