@@ -96,11 +96,11 @@ to keep this a beginner exercise you don't need to check if the greeting is a su
 function should be case insensitive to pass the tests
 */
 function validateHello(greetings) {
-    let res =  /hello|ciao|salut|hallo|hola|ahoj|czesc/i.test(greetings) 
+    let res = /hello|ciao|salut|hallo|hola|ahoj|czesc/i.test(greetings)
     return res;
 }
 
-/* Keep Hydrated!
+/* 'Keep Hydrated!'
 Nathan loves cycling.
 Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
 You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
@@ -110,4 +110,26 @@ time = 3 ----> litres = 1
 time = 6.7---> litres = 3
 time = 11.8--> litres = 5
 */
-let litres = (time) => { return Math.trunc(time * 0.5);}
+let litres = (time) => {
+    return Math.trunc(time * 0.5);
+}
+
+/* 'Total amount of points'
+Our team's match results are recorded in a collection of strings. Each match is represented by a string in the format "x:y", where x is our team's score and y is our opponents score.
+For example: ["3:1", "2:2", "0:1", ...]
+Points are awarded for each match as follows:
+if x > y: 3 points (win)
+if x < y: 0 points (loss)
+if x = y: 1 point (tie)
+We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
+*/
+
+let points = (games) => {
+    let count = 0;
+    for (i of games) {
+        let x = +i[0];
+        let y = +i[2];
+        (x > y) ? count += 3: (x < y) ? count += 0 : count += 1;
+    }
+    return count;
+}
