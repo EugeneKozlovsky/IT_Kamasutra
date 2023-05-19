@@ -238,13 +238,60 @@ Your task is to create a function that returns true if the given number is a Wil
 */
 
 function amIWilson(p) {
-    p = BigInt(p)
-    return ((factorial(p - 1n)) + 1n) % (p * p) == 0n
+    p = BigInt(p);
+    return ((factorial(p - 1n)) + 1n) % (p * p) == 0n;
 }
 
 function factorial(x) {
     if (x <= 1n) {
-        return 1n
+        return 1n;
     }
-    return x * factorial(x - 1n)
+    return x * factorial(x - 1n);
 }
+
+/* Is it a palindrome?
+Write a function that checks if a given string (case insensitive) is a palindrome.
+A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards
+as forwards, such as madam or racecar, the date and time 12/21/33 12:21, and the sentence:
+"A man, a plan, a canal – Panama".
+*/
+
+function isPalindrome(x) {
+    return x.toLowerCase() == x.split('').reverse().join('').toLowerCase();
+}
+
+/* Opposites Attract
+Timmy & Sarah think they are in love, but around where they live, they will only know once they pick
+a flower each. If one of the flowers has an even number of petals and the other has an odd number of
+petals it means they are in love.
+
+Write a function that will take the number of petals of each flower and return true if they are in love
+and false if they aren't.
+*/
+
+function lovefunc(flower1, flower2) {
+    return (flower1 + flower2) % 2 == 1;
+}
+
+/* Get the mean of an array
+It's the academic year's end, fateful moment of your school report. The averages must be calculated.
+All the students come to you and entreat you to calculate their average for them. Easy !
+You just need to write a script.
+Return the average of the given array rounded down to its nearest integer.
+The array will never be empty.
+*/
+
+let getAverage = marks => Math.floor(marks.reduce((sum, x) => (sum + x))/ marks.length);
+
+/* Abbreviate a Two Word Name
+Write a function to convert a name into initials. This kata strictly takes two words with one space
+in between them.
+The output should be two capital letters with a dot separating them.
+It should look like this:
+Sam Harris => S.H
+patrick feeney => P.F
+*/
+
+let abbrevName = name => name.split(" ").reduce((x, y) => x[0].toUpperCase()+ "." + y[0].toUpperCase());
+
+alert(abbrevName("Sam Harris"))
