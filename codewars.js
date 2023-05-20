@@ -281,7 +281,7 @@ Return the average of the given array rounded down to its nearest integer.
 The array will never be empty.
 */
 
-let getAverage = marks => Math.floor(marks.reduce((sum, x) => (sum + x))/ marks.length);
+let getAverage = marks => Math.floor(marks.reduce((sum, x) => (sum + x)) / marks.length);
 
 /* Abbreviate a Two Word Name
 Write a function to convert a name into initials. This kata strictly takes two words with one space
@@ -292,6 +292,24 @@ Sam Harris => S.H
 patrick feeney => P.F
 */
 
-let abbrevName = name => name.split(" ").reduce((x, y) => x[0].toUpperCase()+ "." + y[0].toUpperCase());
+let abbrevName = name => name.split(" ").reduce((x, y) => x[0].toUpperCase() + "." + y[0].toUpperCase());
 
 alert(abbrevName("Sam Harris"))
+
+/* Is the string uppercase?
+Task
+Create a method to see whether the string is ALL CAPS.
+Examples (input -> output)
+"c" -> False
+"C" -> True
+"hello I AM DONALD" -> False
+"HELLO I AM DONALD" -> True
+"ACSKLDFJSgSKLDFJSKLDFJ" -> False
+"ACSKLDFJSGSKLDFJSKLDFJ" -> True
+In this Kata, a string is said to be in ALL CAPS whenever it does not contain any lowercase
+letter so any string containing no letters at all is trivially considered to be in ALL CAPS.
+*/
+
+String.prototype.isUpperCase = function () {
+    return this.toString() === this.toUpperCase()
+}
