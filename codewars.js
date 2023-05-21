@@ -294,8 +294,6 @@ patrick feeney => P.F
 
 let abbrevName = name => name.split(" ").reduce((x, y) => x[0].toUpperCase() + "." + y[0].toUpperCase());
 
-alert(abbrevName("Sam Harris"))
-
 /* Is the string uppercase?
 Task
 Create a method to see whether the string is ALL CAPS.
@@ -312,4 +310,17 @@ letter so any string containing no letters at all is trivially considered to be 
 
 String.prototype.isUpperCase = function () {
     return this.toString() === this.toUpperCase()
+}
+
+/* Count Odd Numbers below n
+
+Given a number n, return the number of positive odd numbers below n, EASY!
+Examples (Input -> Output)
+7  -> 3 (because odd numbers below 7 are [1, 3, 5])
+15 -> 7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
+Expect large Inputs!
+*/
+
+function oddCount(n) {
+    return Math.floor(n / 2);
 }
