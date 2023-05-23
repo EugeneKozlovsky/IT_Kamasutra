@@ -345,4 +345,11 @@ When x1 == x2, this means the root has the multiplicity of two
 */
 
 let quadratic = (x1, x2) => [1, -(x1 + x2), (x1 * x2)];
-    
+
+/* Calculate average
+
+Write a function which calculates the average of the numbers in a given list.
+Note: Empty arrays should return 0.
+*/
+
+let findAverage = array => array.length === 0 ? 0 : array.reduce((a,b) => a + b)/array.length; 
