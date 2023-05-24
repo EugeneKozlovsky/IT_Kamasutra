@@ -382,3 +382,50 @@ Examples:
 */
 
 let isDivisible = (n, x, y) => n % x == 0 && n % y == 0;
+
+/* Removing Elements
+Take an array and remove every second element from the array. Always keep the first element and start
+removing with the next element.
+Example:
+["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+None of the arrays will be empty, so you don't have to worry about that!
+*/
+
+let removeEveryOther = arr => arr.filter((_, i) => !(i % 2));
+
+/*G ravity Flip
+If you've completed this kata already and want a bigger challenge, here's the 3D version
+Bob is bored during his physics lessons so he's built himself a toy box to help pass the time.
+The box is special because it has the ability to change gravity.
+There are some columns of toy cubes in the box arranged in a line.
+The i-th column contains a_i cubes. At first, the gravity in the box is pulling the cubes downwards.
+When Bob switches the gravity, it begins to pull all the cubes to a certain side of the box, d,
+which can be either 'L' or 'R' (left or right). Below is an example of what a box of cubes might look like
+before and after switching gravity.
+Given the initial configuration of the cubes in the box, find out how many cubes are in each of
+the n columns after Bob switches the gravity.
+
+Examples (input -> output:
+* 'R', [3, 2, 1, 2]      ->  [1, 2, 2, 3]
+* 'L', [1, 4, 5, 3, 5 ]  ->  [5, 5, 4, 3, 1]
+*/
+
+const flip = (d, a) => a.sort((x, y) => d === 'R' ? x - y : y - x);
+
+/* Remove First and Last Character Part Two
+You are given a string containing a sequence of character sequences separated by commas.
+Write a function which returns a new string containing the same character sequences except the first
+and the last ones but this time separated by spaces.
+If the input string is empty or the removal of the first and last items would cause the resulting string
+to be empty, return an empty value (represented as a generic value NULL in the examples below).
+
+Examples
+"1,2,3"      =>  "2"
+"1,2,3,4"    =>  "2 3"
+"1,2,3,4,5"  =>  "2 3 4"
+""     =>  NULL
+"1"    =>  NULL
+"1,2"  =>  NULL
+*/
+
+let array = string => string.split(",").slice(1,-1).join(" ") || null
