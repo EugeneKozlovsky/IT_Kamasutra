@@ -353,3 +353,10 @@ Note: Empty arrays should return 0.
 */
 
 let findAverage = array => array.length === 0 ? 0 : array.reduce((a,b) => a + b)/array.length; 
+
+/* Powers of 2
+Complete the function that takes a non-negative integer n as input, and returns a list of all the powers
+of 2 with the exponent ranging from 0 to n ( inclusive ).
+*/
+
+let powersOfTwo = n => [...Array(n + 1)].map((_, i) => Math.pow(2, i));
