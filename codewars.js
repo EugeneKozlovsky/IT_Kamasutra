@@ -353,3 +353,32 @@ Note: Empty arrays should return 0.
 */
 
 let findAverage = array => array.length === 0 ? 0 : array.reduce((a,b) => a + b)/array.length; 
+
+/* Powers of 2
+Complete the function that takes a non-negative integer n as input, and returns a list of all the powers
+of 2 with the exponent ranging from 0 to n ( inclusive ).
+*/
+
+let powersOfTwo = n => [...Array(n + 1)].map((_, i) => Math.pow(2, i));
+
+/* Reversed Words
+Complete the solution so that it reverses all of the words within the string passed in.
+Words are separated by exactly one space and there are no leading or trailing spaces.
+Example(Input --> Output):
+"The greatest victory is that which requires no battle" -->
+"battle no requires which that is victory greatest The"
+*/
+
+let reverseWords = str => str.split(" ").reverse().join(" ");
+
+/* Is n divisible by x and y?
+Create a function that checks if a number n is divisible by two numbers x AND y.
+All inputs are positive, non-zero numbers.
+Examples:
+1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
+2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
+3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
+4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5
+*/
+
+let isDivisible = (n, x, y) => n % x == 0 && n % y == 0;
