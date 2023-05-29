@@ -12,3 +12,6 @@ let removeChar = str => Array.from(str).slice(1, -1).join("");
 
 // 38. 'Miles per gallon to killometers per liter'
 let converter = mpg => +(mpg * 1.609344 / 4.54609188).toFixed(2);
+
+// 39. 'Basic: Making Six Toast'
+ let sixToast = num => Math.abs(6 - num);
