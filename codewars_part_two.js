@@ -14,4 +14,7 @@ let removeChar = str => Array.from(str).slice(1, -1).join("");
 let converter = mpg => +(mpg * 1.609344 / 4.54609188).toFixed(2);
 
 // 39. 'Basic: Making Six Toast'
- let sixToast = num => Math.abs(6 - num);
+let sixToast = num => Math.abs(6 - num);
+
+// 40. 'Cat years, Dog years'
+let humanYearsCatYearsDogYears = x => x == 1 ? [1, 15, 15] : x == 2 ? [2, 24, 24] : [x , 24 + ( 4 * (x-2)), 24 + (5 * (x-2))];
