@@ -17,4 +17,9 @@ let converter = mpg => +(mpg * 1.609344 / 4.54609188).toFixed(2);
 let sixToast = num => Math.abs(6 - num);
 
 // 40. 'Cat years, Dog years'
-let humanYearsCatYearsDogYears = x => x == 1 ? [1, 15, 15] : x == 2 ? [2, 24, 24] : [x , 24 + ( 4 * (x-2)), 24 + (5 * (x-2))];
+let humanYearsCatYearsDogYears = x => x == 1 ? [1, 15, 15] : x == 2 ? [2, 24, 24] : [x, 24 + (4 * (x - 2)), 24 + (5 * (x - 2))];
+
+// 41. 'How much water do I need?'
+function howMuchWater(water, load, clothes) {
+    return (2 * load < clothes) ? "Too much clothes" : (load > clothes) ? "Not enough clothes" : +(water * Math.pow(1.1, (clothes - load))).toFixed(2);
+}
