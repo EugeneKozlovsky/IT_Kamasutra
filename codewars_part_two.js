@@ -23,3 +23,6 @@ let humanYearsCatYearsDogYears = x => x == 1 ? [1, 15, 15] : x == 2 ? [2, 24, 24
 function howMuchWater(water, load, clothes) {
     return (2 * load < clothes) ? "Too much clothes" : (load > clothes) ? "Not enough clothes" : +(water * Math.pow(1.1, (clothes - load))).toFixed(2);
 }
+
+// 42. 'Determine offspring sex based on genes XX and XY chromosomes'
+let chromosomeCheck = sperm => /XY/i.test(sperm) ? "Congratulations! You're going to have a son." : "Congratulations! You're going to have a daughter."
