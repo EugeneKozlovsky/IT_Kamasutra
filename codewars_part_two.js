@@ -26,3 +26,6 @@ function howMuchWater(water, load, clothes) {
 
 // 42. 'Determine offspring sex based on genes XX and XY chromosomes'
 let chromosomeCheck = sperm => /XY/i.test(sperm) ? "Congratulations! You're going to have a son." : "Congratulations! You're going to have a daughter."
+
+// 43. 'Simple multiplication'
+let simpleMultiplication = number => number % 2 === 0 ? number * 8 : number * 9;
