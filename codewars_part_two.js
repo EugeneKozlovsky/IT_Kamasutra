@@ -32,3 +32,6 @@ let simpleMultiplication = number => number % 2 === 0 ? number * 8 : number * 9;
 
 // 44. 'Find Nearest square number'
 const nearestSq = n => Math.pow(Math.round(Math.sqrt(n)), 2);
+
+// 45. 'Remove String Spaces'
+let noSpace = x => x.replace(/ /, "");
