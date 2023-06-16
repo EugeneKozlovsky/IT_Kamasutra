@@ -53,3 +53,10 @@ function changeMe(moneyIn) {
             return moneyIn
     }
 }
+
+// 47. 'Classy Extentions'
+class Cat extends Animal {
+    speak() {
+        return this.name + ' meows.'
+    }
+}
